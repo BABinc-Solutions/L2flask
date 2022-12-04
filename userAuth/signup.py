@@ -19,8 +19,8 @@ def sign_up():
         jsonfile = json.load(file)
         for user in jsonfile["users"]:
             if user["username"] == uname:
-                return "This username is taken!"
+                return render_template("newuserform.html", value="This username is taken!")
         jsonfile["users"].append(dictionary)
         file.seek(0)
         json.dump(jsonfile, file, indent=4)
-        return "You have created a new user"
+        return render_template("newuserform.html", value="User created!")
