@@ -17,7 +17,7 @@ try:
         debug_bool = True
     else:
         exit_main = True
-        raise Exception("You ran main.py with an incorrect argument.")
+        raise Exception()
 except:
     if exit_main:
         sys.exit("You ran main.py with an incorrect argument.")
