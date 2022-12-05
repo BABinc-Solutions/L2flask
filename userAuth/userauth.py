@@ -17,7 +17,6 @@ def user_auth():
             if user["username"] == uname:
                 good_usr = True
                 if user["password"] == pwd:
-                    # Need to build logged inform and return it here
                     return render_template("loginform.html", value="Signed in")
 
     if not good_usr:
