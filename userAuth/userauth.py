@@ -1,8 +1,6 @@
 from flask import Blueprint, render_template, request
 import json
 
-# need to create a check for if username and password are blank strings
-
 userauth = Blueprint("userauth", __name__)
 
 
@@ -19,9 +17,10 @@ def user_auth():
             if user["username"] == uname:
                 good_usr = True
                 if user["password"] == pwd:
+                    # Need to build logged inform and return it here
                     return render_template("loginform.html", value="Signed in")
 
-    if good_usr != True:
+    if not good_usr:
         return render_template("loginform.html", value="Incorrect user name")
     else:
         return render_template("loginform.html", value="Incorrect password")

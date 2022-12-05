@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, request
 import json
 
 # need to create a check for if username and password are blank strings
+# need to add hashing to the the password
 
 signup = Blueprint("signup", __name__)
 
