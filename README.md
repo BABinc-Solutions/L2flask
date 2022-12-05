@@ -1,5 +1,5 @@
 # L2flask
-By default, the app runs with debug mode active.
+Playing around with flask and qrcode
 
 # Run argument
 python main.py true <br>
